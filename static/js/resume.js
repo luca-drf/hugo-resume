@@ -20,16 +20,13 @@
     $('.navbar-collapse').collapse('hide');
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#sideNav'
   });
-
-
-
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-
 
 })(jQuery); // End of use strict
