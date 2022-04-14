@@ -25,20 +25,20 @@
       <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"></noscript>
  <!-- Font Icons core CSS -->
       <link rel="preload" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"></noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous"></noscript>
   <!-- Custom styles for this template -->
-  <link rel="preload" href="{{ "css/resume.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "css/resume.css" | absURL }}"></noscript>
-  <link rel="preload" href="{{ "css/tweaks.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "css/tweaks.css" | absURL }}"></noscript>
-  <link rel="preload" href="{{ "css/resume-override.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "css/resume-override.css" | absURL }}"></noscript>
-  {{ hugo.Generator }}
+  {{ $resumeCSS := resources.Get "css/resume.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $resumeCSS.Permalink }}" integrity="{{ $resumeCSS.Data.Integrity }}" media="screen">
+  {{ $tweaksCSS := resources.Get "css/tweaks.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $tweaksCSS.Permalink }}" integrity="{{ $tweaksCSS.Data.Integrity }}" media="screen">
+  {{ range .Site.Params.customCSS -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+  {{- end }}
   {{ block "headfiles" . }}
-   <!-- pl;aceholder -->
+   <!-- placeholder -->
   {{ end }}
 </head>
 <body id="page-top">
@@ -74,7 +74,8 @@
   <!-- Plugin JavaScript -->
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
   <!-- Custom scripts for this template -->
-  <script async src="/js/resume.js"></script>
+  {{ $resumeJS := resources.Get "js/resume.js" | minify }}
+  <script async src="{{ $resumeJS.Permalink }}"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google.analytics.trackerID }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
