@@ -121,3 +121,28 @@ div.skills-heading{
   width: auto;
   object-fit: cover;
 }
+
+code {
+  padding: .2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(33, 35, 37, 0.05);
+  border-radius: 3px;
+  color: rgb(79, 77, 77);
+}
+
+.highlight pre {
+  border-radius: 6px;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  font-size: .875rem;
+  line-height: 2;
+  overflow-x: auto;
+}
+
+.navbar-dark .navbar-toggler {
+  border: 0px;
+}
