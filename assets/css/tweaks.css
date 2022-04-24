@@ -29,7 +29,7 @@ div.skills-heading{
 /* From https://codepen.io/wbeeftink/pen/dIaDH */
 
 .tags {
-    font: 12px/1.5 'PT Sans', serif;
+    font: 12px/1.5 'PT Sans', sans-serif;
   list-style: none;
   margin: 0;
   overflow: hidden;
