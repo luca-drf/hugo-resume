@@ -6,6 +6,7 @@
     	<h2 class="portfolio mb-0"><span class="text-primary">{{ .Title }}</span></h2>
     	<span class="">{{ .Date.Format "January 2, 2006" }}</span>
     </div>
+	<div class="mb-5"><h4>{{ .Summary }}</h4></div>
     <div>
     	{{ .Content }}
 	    {{ with .Params.link }}
