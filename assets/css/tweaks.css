@@ -122,6 +122,10 @@ div.skills-heading{
   object-fit: cover;
 }
 
+.fit-breadcrumbs {
+  margin-top: -16px;
+}
+
 code {
   padding: .2em;
   margin: 0;
