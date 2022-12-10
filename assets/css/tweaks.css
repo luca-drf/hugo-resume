@@ -83,7 +83,7 @@ div.skills-heading{
 }
 
 .tag:hover::after {
-   border-left-color: crimson;
+   border-left-color: rgb(192, 168, 125);
 }
 
 .project-fact{
@@ -93,6 +93,8 @@ div.skills-heading{
 
 .resume-section blockquote {
     border-left: 4px solid #BD5D38;
+    background-color: rgba(212, 212, 212, 0.2);
+    border-radius: 3px;
     padding-left: 1em;
 }
 
