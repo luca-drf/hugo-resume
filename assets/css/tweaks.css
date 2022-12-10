@@ -100,7 +100,7 @@ div.skills-heading{
 
 /* Fix responsive width for blog posts */
 .my-auto {
-	width: 100%
+	max-width: 800px;
 }
 
 /* From http://jsfiddle.net/Mottie/RNVaZ/ */
