@@ -3,6 +3,7 @@ baseURL = "https://example.com/"
 theme = "hugo-resume"
 languageCode = "en-us"
 enableGitInfo = false
+enableRobotsTXT = true
 
 [params]
 jobTitle = "Software Engineer"
@@ -21,6 +22,7 @@ showProjects = false
 showPublications = false
 showQr = false
 showSkills = true
+googleSiteVerification = "verification-hash"
 
 [[params.handles]]
 link = "https://www.linkedin.com/in/edwardwebb/"
