@@ -2,22 +2,24 @@
 {{ partial "breadcrumbs" . }}
 {{ if isset .Params "image" }}
 <div class="resp-container fit-breadcrumbs">
-  <img class="wide tall" src="{{ .Params.image }}"/>
+	<div class="fill">
+		<img src="{{ .Params.image }}" alt="{{ .Params.alt }}"/>
+	</div>
 </div>
 {{ end }}
 <section class="resume-section p-3 p-lg-5 d-flex flex-column">
-   	<div class="mb-3 d-flex flex-row justify-content-between">
-		<div class="my-auto">
-    		<h2 class="portfolio mb-0"><span class="text-primary">{{ .Title }}</span></h2>
-			<div class="mb-5"><h4>{{ .Summary }}</h4></div>
-    		<div>
-    			{{ .Content }}
-	    		{{ with .Params.link }}
-	    		<p>Project link: <a href="{{ . }}">{{ . }}</a></p>
-      			{{ end }}
-			</div>
+	<div class="my-auto">
+		<div class="mb-3 d-flex flex-row justify-content-between">
+			<h2 class="portfolio mb-0"><span class="text-primary">{{ .Title }}</span></h2>
+			<span class="">{{ .Date.Format "January 2, 2006" }}</span>
 		</div>
-		<span class="">{{ .Date.Format "January 2, 2006" }}</span>
-	</div>
+		<div class="mb-5"><h4>{{ .Summary }}</h4></div>
+		<div>
+		  {{ .Content }}
+		  {{ with .Params.link }}
+		    <p>Project link: <a href="{{ . }}">{{ . }}</a></p>
+		  {{ end }}
+		</div>
+  </div>
 </section>
 {{ end }}
