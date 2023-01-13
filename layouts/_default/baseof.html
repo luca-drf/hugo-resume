@@ -49,7 +49,7 @@
     {{ block "main" . }}
       {{ .Content }}
     {{ end }}
-    <span style="color: #999999; font-size: 60%;">Copyright &copy; 2022 Luca Da Rin Fioretto.</span>
+    <span style="color: #999999; font-size: 60%;">Copyright &copy; {{ now.Format "2006" }} Luca Da Rin Fioretto.</span>
     <span style="color: #999999; font-size: 60%;">Based on <a href="https://github.com/eddiewebb/hugo-resume">hugo-resume</a> theme and generated with <a href="https://gohugo.io/">HUGO</a></span>
     {{ with $.GitInfo }}{{ with $.Site.Params.gitCommitPrefix }} | <span style="color: #999999; font-size: 60%;">Page content generated from commit: <a href="{{ . }}/{{ $.GitInfo.AbbreviatedHash }}" title="log: {{ $.GitInfo.Subject }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ end }}{{ end }}
   </div>
