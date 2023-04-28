@@ -1,6 +1,6 @@
 <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="anchored-heading">{{ .Text | safeHTML }}
 {{- if and (ge .Level 1) (le .Level 6) }}{{" " -}}
-<a class="anchor js-scroll-trigger" href="#{{ .Anchor | safeURL }}">
+<a class="header-link" href="#{{ .Anchor | safeURL }}">
     <i class="fa fa-link anchor-icons"></i>
 </a>
 {{- end -}}
