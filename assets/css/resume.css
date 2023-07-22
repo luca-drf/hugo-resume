@@ -219,3 +219,15 @@ a:hover, a:focus, a:active {
 #github-corner {
   position: relative;
 }
+
+.devicon-svg-plain {
+  max-width: 1.1em;
+  display: inline-flex;
+  align-self: center;
+  top: .125em;
+  position: relative;
+}
+
+.devicon-svg-plain path {
+  fill: #4691f6;
+}
