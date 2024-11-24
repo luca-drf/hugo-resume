@@ -4,7 +4,8 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Sans Hebrew', sans-serif;
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 1.1rem;
   padding-top: 54px;
   color: #868e96;
   position: relative;
@@ -23,7 +24,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', sans-serif;
+  font-family: 'Inconsolata', sans-serif;
+  font-stretch: condensed;
   font-weight: 700;
   color: #343a40;
 }
@@ -39,23 +41,33 @@ h1, h2{
 }
 
 h1 {
+  font-family: 'Saira Extra Condensed', sans-serif;
   font-size: 6rem;
   line-height: 5.5rem;
 }
 
 h2.portfolio {
+  font-family: 'Saira Extra Condensed', sans-serif;
   font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+h3.summary {
+  font-size: 1.7rem;
 }
 
 .subheading {
   text-transform: uppercase;
+  font-synthesis: none;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: 1.35rem;
+  font-stretch: condensed;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 1.25rem;
 }
 
 .list-social-icons a {
