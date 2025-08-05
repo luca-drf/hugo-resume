@@ -7,7 +7,7 @@ body {
   font-family: 'Inconsolata', sans-serif;
   font-size: 1.1rem;
   padding-top: 54px;
-  color: #868e96;
+  color: #5d646a;
   position: relative;
 }
 
@@ -95,7 +95,7 @@ h3.summary {
 }
 
 .anchor-icons {
-  color: #a1aab3;
+  color: #8d959d;
 }
 
 h1 .anchor-icons {
