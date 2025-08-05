@@ -76,7 +76,7 @@ tag = "tags"
   [privacy.instagram]
     disable = false
     simple = false
-  [privacy.twitter]
+  [privacy.x]
     disable = false
     enableDNT = false
     simple = false
