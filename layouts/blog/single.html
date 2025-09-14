@@ -13,7 +13,7 @@
 			<h2 class="portfolio mb-0"><span class="text-primary">{{ .Title }}</span></h2>
 			<span class="">{{ .Date.Format "January 2, 2006" }}</span>
 		</div>
-		<div class="mb-5"><h3 class="summary">{{ .Summary }}</h3></div>
+		<div class="mb-5"><h3 class="summary">{{ .Summary }}</h3>{{ partial "techtags.html" . }}</div>
 		<div>
 		  {{ .Content }}
 		  {{ with .Params.link }}
