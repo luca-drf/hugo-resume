@@ -29,7 +29,7 @@ div.skills-heading{
 /* From https://codepen.io/wbeeftink/pen/dIaDH */
 
 .tags {
-    font: 12px/1.5 'PT Sans', sans-serif;
+    font: 12px/1.5 'Inconsolata', sans-serif;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -41,9 +41,9 @@ div.skills-heading{
 }
 
 .tag {
-  background: #eee;
+  background: #ddd;
   border-radius: 3px 0 0 3px;
-  color: #999;
+  color: #343a40;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -69,7 +69,7 @@ div.skills-heading{
 .tag::after {
   background: #fff;
   border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
+  border-left: 10px solid #ddd;
   border-top: 13px solid transparent;
   content: '';
   position: absolute;
@@ -83,7 +83,7 @@ div.skills-heading{
 }
 
 .tag:hover::after {
-   border-left-color: rgb(192, 168, 125);
+   border-left-color: crimson;
 }
 
 .project-fact{
